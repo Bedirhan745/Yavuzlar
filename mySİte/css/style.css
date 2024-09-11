@@ -1,0 +1,192 @@
+:root {
+    --app-light: #aee6ee;
+    --app-dark: #29b3ca;
+    --app-progress: #6fc3d1;
+    --app-gray: #6f6f6f;
+    --app-gray-light: #6f6f6f50;
+}
+
+body {
+    display: flex;
+    background-color: #001e4d;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    align-items: center; /**/
+    font-family:"Roboto" ;
+   padding-top: 5rem;
+   color:#001e4d;
+   
+    
+}
+.q_container {
+    display: flex;
+    width: 75vw;
+    height: 850px;
+    background-color: white;
+    box-shadow: 5px 5px 15px var(--app-gray-light);
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    position: relative;
+}
+#sorubar {
+    width: 70vw;
+    height: 20px;
+    background-color:#64775e;
+    border-radius: 20px;
+    background-color: #124d00; /*değişecek zorluğa göre*/ /*yeşil sarı ve kırmızı*/ /*  Kolay: #124d00   Orta: cdb132   zor: #4d0500  */
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    margin-top: 3rem;
+    
+
+}
+#cevaplar {
+    width: inherit;
+}
+.cevap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 25px;
+    cursor: pointer;
+    
+
+}
+.cevap .sik {
+    width: 5%;
+    background-color: rgb(243, 181, 100);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    margin-top: 25px;
+    
+}
+.text {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    border: 1px solid var(--app-gray-light);
+    color: var(--app-gray);
+    padding-left: 2rem;
+    font-size: 25px;
+    margin-top: 25px;
+    height: 70px;
+}
+.text:hover:not([disabled]) {
+    color: white;
+    border-color: var(--app-gray);
+    background-color: #000000;
+    cursor: pointer;
+    
+}
+#cevaplar .text {
+    margin-left: 25px;
+    margin-right: 25px !important;
+}
+.cevap .sik:hover {
+    color: #6f6f6f;
+}
+#next-btn {
+    background-color: var(--app-dark);
+    color: rgb(255, 255, 255);
+    border: 0.5px;
+    width: 250px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+
+}
+.cevap .sik {
+    display: none;
+}
+#next-btn:hover {
+    color:  rgb(201, 201, 201);
+}
+#next-btn {
+    background-color: rgb(12, 110, 196);
+}
+a:active {
+    background-color: #001e4d;
+}
+#tebrikler {
+    position: absolute;
+    display: none;
+   justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    background-color: #6f6f6f57;
+    border-radius: inherit;
+    z-index: 999;
+}
+/*.tebrik_container.show {
+    display: flex;
+}*/
+.tebrik {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    border-radius: inherit;
+}
+img {
+    margin-top: 2rem;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.tebrikmesaji {
+    font-size: 1.5rem;
+}
+#finish_btn {
+    background-color: green;
+    color: rgb(255, 255, 255);
+    border: 0.5px;
+    width: 250px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+
+}
+#finish_btn:hover {
+    color:  rgb(201, 201, 201);
+
+}
+#puan {
+    margin-top: 2px;
+    font-size: 2rem
+}
+.dogru {
+    background-color: #1d7a00;
+    color: white;
+
+}
+.yanlis {
+    background-color: #810000;
+    color: white;
+}
+
+
+
+
+
