@@ -1,0 +1,404 @@
+
+body {
+    scrollbar-width: 1px ;
+    height: 60vw;
+    background-color: black;
+    color: greenyellow;
+    overflow-y: scroll;
+    
+}
+
+.container {
+    /* border: #00A600 solid 1px; */
+    margin: 10px auto;
+    padding: 20px;
+    background: #000;
+    border-top: 1px solid #00A600;
+    -moz-box-shadow: inset 0 0 5px #00c6ff;
+    -webkit-box-shadow: inset 0 0 5px #00c6ff;
+    box-shadow: 0 0 5px #00A600;
+    border-radius: 5px;
+}
+
+.information {
+    border-bottom: 1px solid #00A600;
+    padding: 7px;
+    line-height: 1.3em;
+    padding-bottom: 25px;
+    color: red;
+}
+
+#out {
+    text-decoration: none;
+    color: #b59e9e;
+    font-size: 24px;
+    margin: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#div_out {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.out_back {
+   list-style: none;
+   border: #00c6ff 1px solid;
+   margin: 5px;
+   cursor: pointer;
+   width: 100px;
+   height: 35px;
+   font-size: 20px;
+   text-align: center;
+   line-height: 35px;
+   box-shadow:-1px 2px 17px 0px blue;
+   border-radius: 7px;
+}
+.out_back:hover {
+    box-shadow:-1px 2px 17px 4px blue;
+}
+.out_back:hover #out{
+    color: #b59e9e8c;
+
+}
+.time {
+    list-style: none;
+    font-size: 25px;
+}
+span {
+    color: white;
+}
+.menu {
+    border-bottom: 1px solid #00A600;
+    padding: 14px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.menu li {
+    list-style: none;
+    background-color: rgb(147, 157, 165);
+    height: 25px;
+    width: 105%;
+    text-align: center;
+    line-height: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+.menu li a {
+    color: #880202;
+    display: inline-block;
+    width: 100%;
+    
+}
+.menu li:hover {
+    cursor: pointer;
+    background-color: rgba(147, 157, 165, 0.61);
+
+}
+.menu_items {
+    text-decoration: none;
+}
+
+.isfile {
+    height: 35px;
+    background-color: #00a6006e;
+    color: white;
+    margin: 3px;
+    line-height: 35px;
+    
+
+}
+.isdir {
+    height: 40px;
+    background-color: #22e2225b;
+    color: aliceblue;
+    margin: 3px;
+    line-height: 35px;
+    
+}
+
+.isdir a {
+    display: inline-block;
+    width: 100%;
+    height: inherit;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.isfile a {
+    display: inline-block;
+    width: 100%;
+    height: inherit;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+
+}
+.container_of_the_AER {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+
+    
+}
+.container_of_the_AER div {
+    margin: 5px;
+    font-size: 25px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.171) ;    
+    border-radius: 25px;
+   
+}
+.container_of_the_AER div a {
+    text-decoration: none; 
+    display: inline-block; 
+    width: 100%;
+    height: 100%;
+    color: #880202;
+    position: relative;
+    
+}
+.container_of_the_AER div:hover {
+    background-color:rgba(255, 255, 255, 0.521) ; 
+    box-shadow: 0px 3px #00c6ff ,  0px -1px 20px 0px #00c6ff; 
+}
+.islemler {
+    position: relative;
+}
+.Show_dir {
+    position: absolute;
+    margin-bottom: 10px;
+    top: -95px;
+    right: 20px;
+}
+.container_of_the_AER div i {
+    color: rgba(255, 255, 255, 0.411);
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    
+}
+.addfile {
+    position: relative;
+    color : #880202;
+}
+.addfile:hover i {
+    color:  rgba(0, 0, 0, 0.74);
+    animation: top 1s infinite;
+}
+.addfile:hover {
+    cursor: pointer;
+    background-color:rgba(255, 255, 255, 0.521) ; 
+    box-shadow: 0px -3px #00c6ff, 0px 6px 20px 0px #00c6ff !important;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.addfile:hover li {
+    
+    background-color: #686868;
+   margin: 0;
+    display: block;
+   
+    
+}
+@keyframes top {
+    0% {
+        top: 1px;
+    }
+    100% {
+        top: 2px;
+    }
+
+}
+
+.addfile li {
+   
+    display: none;
+}
+.addfile li:hover {
+    background-color: #dadada;
+}
+
+
+/* Add File kısmına geliyorum*/
+
+.newitem_container {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.newitem_container form {
+    width: 25%;
+    height: 100px;
+    display: flex;
+    text-align: center;
+   
+}
+.newitem_container form div {
+    width: 100%;
+}
+.newitem_container input {
+    width: 100%;
+    display: block;
+    height: 45px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    
+   
+}
+.newFolder_div input {
+    width: 100%;
+    height: 30px;
+    border: #00A600 2px solid;
+    background-color: gray;
+    color: white;
+}
+.newitem_container input:hover {
+    background-color: rgba(255, 255, 255, 0.616);
+}
+.newitem_container button {
+    border: none;
+    border-radius: 25px;
+    width: 155px;
+    height: 30px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.newitem_container button:hover {
+    background-color: gray;
+}
+.Show_dir_in_form {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+.hata_message {
+    color: red;
+}
+.show_file {
+    display: flex;
+}
+.twice_class_for_files {
+    width: 70%;
+    
+}
+.twice_class_for_files div {
+    line-height: 200%;
+    display: inline-block;
+    align-items: center;
+    width: 15%;
+    height: 55px;
+   
+
+}
+.twice_class_for_files div button {
+    background-color: transparent;
+   
+ 
+   height: 100%;
+   width: 100%;
+   color: #880202;
+    border: none;
+    font-size: 20px;
+}
+.show_file textarea {
+    width: 85%;
+    padding: 25px;
+    resize: none;
+    overflow: auto;
+    word-wrap: break-word;
+    border-radius: 5px;
+    border: 3px green ridge;
+    box-shadow:  -1px -5px 20px 0px #00A600;
+    height: 500px;
+    background-color: #000;
+    color: white;
+    margin-right: 25px;
+    overflow-y: scroll;
+    
+    
+}
+.show_file textarea::-webkit-scrollbar {
+    width: 0.1px;
+}
+body::-webkit-scrollbar {
+    width: 0.1px;
+}
+.show_file textarea:active {
+    border: #000000;
+}
+.serach_container {
+    text-align: center;
+    line-height: 100px;
+    height: 100px;
+}
+.serach_container input {
+    width: 25%;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    box-shadow:  0px 0px 20px 7px green;
+}
+.serach_container input:hover {
+    background-color: rgba(245, 222, 179, 0.774);
+    box-shadow:  0px 0px 20px 7px rgb(0, 51, 128);
+}
+.serach_container button {
+    margin-left: 15px;
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.serach_container button:hover {
+    background-color: #00A600;
+    box-shadow: #00c6ff 0px 0px 20px;
+    color:white;
+}
+
+pre {
+    color: gray;
+}
+
+pre span {
+    font-weight: bold;
+    color: red;
+}
+pre span.yildiz {
+    color:white;
+}
+.myLogo {
+    width: 250px;
+    height: 250px;
+    margin-left: 25px;
+}
+.myLogo2 {
+
+    width: 1100px;
+    height: 300px;
+    margin-right: 25px;
+   
+}
+.logo_cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 45px;
+    
+}
